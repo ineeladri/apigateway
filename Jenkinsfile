@@ -12,7 +12,7 @@ withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'test',
         sh 'docker login -u apurva09 -p $password'
 	}
     stage("Pushing Image to Docker Hub"){
-	     sh 'docker tag apigateway apurva09/customer:latest'
+	     sh 'docker tag apigateway apurva09/apigateway:latest'
 	   sh 'docker push apurva09/apigateway:latest'
     }
 }
